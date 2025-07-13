@@ -18,11 +18,26 @@
   --kerala-dark-red: #8B0000;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  --color-kerala-white: #FFFFFF;
+  --color-kerala-golden: #D4AF37;
+  --color-kerala-red: #DC143C;
+  --color-kerala-dark-golden: #B8860B;
+  --color-kerala-light-golden: #F4E4BC;
+  --color-kerala-dark-red: #8B0000;
+  --color-kerala-light-red: #FFB6C1;
+  --color-kerala-green: #228B22;
+  --color-kerala-orange: #FF8C00;
+  --color-kerala-purple: #9370DB;
+  --color-kerala-teal: #008080;
+  --color-kerala-yellow: #FFD700;
+  --color-kerala-pink: #FF69B4;
+  --color-kerala-cyan: #00CED1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,6 +51,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Kerala-themed custom styles */
@@ -229,6 +246,11 @@ body {
   margin-right: 1rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -264,7 +286,6 @@ body {
   opacity: 0.9;
 }
 
-/* Ensure proper spacing and layout */
 .space-y-4 > * + * {
   margin-top: 1rem;
 }
@@ -273,10 +294,9 @@ body {
   margin-top: 1.5rem;
 }
 
-/* Fix for mobile responsiveness */
 @media (max-width: 768px) {
   .text-6xl {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   
   .text-2xl {
@@ -284,6 +304,6 @@ body {
   }
   
   .max-w-md {
-    max-width: 90%;
+    max-width: 100%;
   }
 }

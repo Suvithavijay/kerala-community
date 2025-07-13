@@ -29,11 +29,6 @@ module.exports = {
       },
       backgroundImage: {
         'kerala-pattern': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23D4AF37\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
-        'kerala-food': "url('https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop')",
-        'kerala-kathakali': "url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop')",
-        'kerala-backwaters': "url('https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&h=600&fit=crop')",
-        'kerala-temple': "url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop')",
-        'kerala-nature': "url('https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&h=600&fit=crop')",
       },
       animation: {
         'float': 'kerala-float 3s ease-in-out infinite',
