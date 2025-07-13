@@ -6,7 +6,7 @@ export default function Events() {
   // Temporarily disable authentication for development
   // const { isAuthenticated, requestAccess } = useAuth();
 
-  const basePath = '';
+  const basePath = process.env.NODE_ENV === 'production' ? '/kerala-community' : '';
 
   const events = [
     {
