@@ -5,8 +5,6 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
-    loader: 'default',
-    path: '/kerala-community',
   },
   assetPrefix: "/kerala-community",
   basePath: "/kerala-community",
