@@ -7,7 +7,16 @@ export default function ManageImages() {
   // Temporarily bypass authentication for development
   // const { isAuthenticated, userEmail } = useAuth();
 
-  const [uploadedImages, setUploadedImages] = useState<any[]>([]);
+  const [uploadedImages, setUploadedImages] = useState<Array<{
+    id: number;
+    name: string;
+    size: number;
+    type: string;
+    uploadedAt: string;
+    uploadedBy: string;
+    url: string | null;
+    status: string;
+  }>>([]);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [uploading, setUploading] = useState(false);
@@ -86,7 +95,7 @@ export default function ManageImages() {
       // Clear message after 3 seconds
       setTimeout(() => setUploadMessage(''), 3000);
 
-    } catch (error) {
+    } catch {
       setUploadMessage('Upload failed. Please try again.');
     } finally {
       setUploading(false);
@@ -213,7 +222,7 @@ export default function ManageImages() {
                   <div key={image.id} className="bg-dark-gray rounded-lg p-4 kerala-shadow-vibrant">
                     <div className="mb-4">
                       <img
-                        src={image.url}
+                        src={image.url || ''}
                         alt={image.name}
                         className="w-full h-48 object-contain rounded-lg"
                       />

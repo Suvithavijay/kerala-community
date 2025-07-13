@@ -2,26 +2,15 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { useAuth } from './AuthProvider';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   
-  // Always call useAuth to follow React hooks rules
-  let authContext;
-  try {
-    authContext = useAuth();
-  } catch {
-    // If AuthProvider is not available, use default values
-    authContext = {
-      isAuthenticated: false,
-      userEmail: null,
-      logout: () => {},
-    };
-  }
-
-  const { isAuthenticated, userEmail, logout } = authContext;
+  // Temporarily disable authentication for development
+  const isAuthenticated = false;
+  const userEmail = null;
+  const logout = () => {};
 
   useEffect(() => {
     setMounted(true);
