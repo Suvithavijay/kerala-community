@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import getConfig from 'next/config';
 
 interface Photo {
   id: number;
@@ -15,8 +14,7 @@ interface Photo {
 }
 
 export default function GalleryPage() {
-  const { publicRuntimeConfig } = getConfig();
-  const basePath = publicRuntimeConfig.basePath || '';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
 

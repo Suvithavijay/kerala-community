@@ -1,14 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import getConfig from 'next/config';
 
 export default function Home() {
   // Temporarily disable authentication for development
   // const { isAuthenticated, requestAccess } = useAuth();
 
-  const { publicRuntimeConfig } = getConfig();
-  const basePath = publicRuntimeConfig.basePath || '';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   const featuredEvents = [
     {
