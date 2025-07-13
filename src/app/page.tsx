@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Home() {
   // Temporarily disable authentication for development
@@ -127,11 +126,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-24 h-24 bg-gradient-to-r from-kerala-red to-kerala-golden rounded-full flex items-center justify-center mx-auto mb-4 kerala-float overflow-hidden">
-                <Image
+                <img
                   src="/OnamSadhya.jpg"
                   alt="Sadhya Feast"
-                  width={96}
-                  height={96}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -144,11 +141,9 @@ export default function Home() {
             </div>
             <div className="text-center">
               <div className="w-24 h-24 bg-gradient-to-r from-kerala-purple to-kerala-pink rounded-full flex items-center justify-center mx-auto mb-4 kerala-float overflow-hidden" style={{animationDelay: '1s'}}>
-                <Image
+                <img
                   src="/moh.jpg"
                   alt="Music & Dance"
-                  width={96}
-                  height={96}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -161,11 +156,9 @@ export default function Home() {
             </div>
             <div className="text-center">
               <div className="w-24 h-24 bg-gradient-to-r from-kerala-green to-kerala-teal rounded-full flex items-center justify-center mx-auto mb-4 kerala-float" style={{animationDelay: '2s'}}>
-                <Image
+                <img
                   src="/tug.jpg"
                   alt="Traditional Games"
-                  width={96}
-                  height={96}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -178,11 +171,9 @@ export default function Home() {
             </div>
             <div className="text-center">
               <div className="w-24 h-24 bg-gradient-to-r from-kerala-orange to-kerala-red rounded-full flex items-center justify-center mx-auto mb-4 kerala-float overflow-hidden" style={{animationDelay: '3s'}}>
-                <Image
+                <img
                   src="/mav.jpg"
                   alt="Festivals"
-                  width={96}
-                  height={96}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -213,11 +204,9 @@ export default function Home() {
             {featuredEvents.map((event) => (
               <div key={event.id} className="bg-dark-gray rounded-lg shadow-lg overflow-hidden kerala-card-hover kerala-shadow-vibrant">
                 <div className="h-40 relative overflow-hidden rounded-lg">
-                  <Image
+                  <img
                     src={event.image}
                     alt={event.title}
-                    width={400}
-                    height={160}
                     className="w-full h-full object-contain object-center"
                     loading={event.id === 1 ? "eager" : "lazy"}
                   />

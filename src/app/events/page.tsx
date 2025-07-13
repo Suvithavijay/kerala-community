@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Events() {
   // Temporarily disable authentication for development
@@ -129,11 +128,9 @@ export default function Events() {
               {events.map((event) => (
                 <div key={event.id} className="bg-dark-gray rounded-lg shadow-lg overflow-hidden kerala-card-hover kerala-shadow-vibrant">
                   <div className="h-48 relative overflow-hidden rounded-lg">
-                    <Image
+                    <img
                       src={event.image}
                       alt={event.title}
-                      width={400}
-                      height={192}
                       className="w-full h-full object-contain object-center"
                       loading={event.id === 1 ? "eager" : "lazy"}
                     />
