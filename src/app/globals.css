@@ -1,8 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
+  --kerala-golden: #D4AF37;
+  --kerala-red: #DC143C;
+  --kerala-white: #FFFFFF;
+  --kerala-green: #228B22;
+  --kerala-orange: #FF8C00;
+  --kerala-purple: #9370DB;
+  --kerala-teal: #008080;
+  --kerala-yellow: #FFD700;
+  --kerala-pink: #FF69B4;
+  --kerala-cyan: #00CED1;
+  --kerala-dark-golden: #B8860B;
+  --kerala-light-golden: #F4E4BC;
+  --kerala-dark-red: #8B0000;
 }
 
 @theme inline {
@@ -14,13 +27,263 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
+    --foreground: #ffffff;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Kerala-themed custom styles */
+.bg-kerala-gradient {
+  background: linear-gradient(135deg, var(--kerala-white) 0%, var(--kerala-golden) 50%, var(--kerala-red) 100%);
+}
+
+.bg-kerala-gradient-vibrant {
+  background: linear-gradient(135deg, #FFD700 0%, #FFFFFF 20%, #DC143C 40%, #D4AF37 60%, #FF8C00 80%, #B8860B 100%);
+}
+
+.bg-kerala-gradient-sunset {
+  background: linear-gradient(135deg, #DC143C 0%, #FFD700 25%, #FFFFFF 50%, #D4AF37 75%, #FF8C00 100%);
+}
+
+.bg-kerala-gradient-nature {
+  background: linear-gradient(135deg, #228B22 0%, #32CD32 25%, #90EE90 50%, #98FB98 75%, #F0FFF0 100%);
+}
+
+.text-kerala-white {
+  color: var(--kerala-white);
+}
+
+.text-kerala-golden {
+  color: var(--kerala-golden);
+}
+
+.text-kerala-red {
+  color: var(--kerala-red);
+}
+
+.text-kerala-dark-golden {
+  color: var(--kerala-dark-golden);
+}
+
+.bg-kerala-red {
+  background-color: var(--kerala-red);
+}
+
+.bg-kerala-dark-red {
+  background-color: var(--kerala-dark-red);
+}
+
+.bg-kerala-yellow {
+  background-color: var(--kerala-yellow);
+}
+
+.bg-kerala-pink {
+  background-color: var(--kerala-pink);
+}
+
+.bg-kerala-cyan {
+  background-color: var(--kerala-cyan);
+}
+
+.bg-kerala-green {
+  background-color: var(--kerala-green);
+}
+
+.bg-kerala-teal {
+  background-color: var(--kerala-teal);
+}
+
+.bg-kerala-orange {
+  background-color: var(--kerala-orange);
+}
+
+.bg-kerala-purple {
+  background-color: var(--kerala-purple);
+}
+
+.bg-kerala-white {
+  background-color: var(--kerala-white);
+}
+
+.bg-kerala-light-golden {
+  background-color: var(--kerala-light-golden);
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+.bg-dark-gray {
+  background-color: #1a1a1a;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-gray-300 {
+  color: #d1d5db;
+}
+
+.kerala-border {
+  border: 2px solid var(--kerala-golden);
+  border-radius: 8px;
+}
+
+.kerala-shadow {
+  box-shadow: 0 4px 6px -1px rgba(212, 175, 55, 0.1), 0 2px 4px -1px rgba(220, 20, 60, 0.06);
+}
+
+.kerala-shadow-vibrant {
+  box-shadow: 0 8px 25px -5px rgba(220, 20, 60, 0.3), 0 4px 10px -2px rgba(212, 175, 55, 0.2);
+}
+
+.bg-kerala-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(220, 20, 60, 0.1) 2px, transparent 2px);
+  background-size: 30px 30px;
+}
+
+.kerala-text-gradient {
+  background: linear-gradient(135deg, #D4AF37, #DC143C, #FF8C00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.kerala-card-hover {
+  transition: all 0.3s ease;
+}
+
+.kerala-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(220, 20, 60, 0.2);
+}
+
+/* Animated elements */
+@keyframes kerala-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.kerala-float {
+  animation: kerala-float 3s ease-in-out infinite;
+}
+
+@keyframes kerala-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.kerala-pulse {
+  animation: kerala-pulse 2s ease-in-out infinite;
+}
+
+/* Additional responsive and layout fixes */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-gray-600 {
+  color: #4b5563;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+/* Ensure proper spacing and layout */
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+/* Fix for mobile responsiveness */
+@media (max-width: 768px) {
+  .text-6xl {
+    font-size: 3rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+  
+  .max-w-md {
+    max-width: 90%;
+  }
 }
