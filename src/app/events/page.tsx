@@ -1,9 +1,10 @@
 'use client';
 
-import Link from "next/link";
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Events() {
-  // Temporarily bypass authentication for development
+  // Temporarily disable authentication for development
   // const { isAuthenticated, requestAccess } = useAuth();
 
   const events = [
@@ -18,9 +19,10 @@ export default function Events() {
       category: "festival",
       color: "from-kerala-orange to-kerala-red",
       details: [
-        "Traditional Onam Sadhya with 26+ dishes",
-        "Kathakali and Mohiniyattam performances",
+        "Traditional Onam Sadhya feast with 26+ dishes",
+        "Kathakali and cultural performances",
         "Traditional Kerala games and activities",
+        "Community bonding and networking",
         "Cultural music and dance programs",
         "Family photo sessions in traditional attire"
       ]
@@ -127,17 +129,13 @@ export default function Events() {
               {events.map((event) => (
                 <div key={event.id} className="bg-dark-gray rounded-lg shadow-lg overflow-hidden kerala-card-hover kerala-shadow-vibrant">
                   <div className="h-48 relative overflow-hidden rounded-lg">
-                    <img
+                    <Image
                       src={event.image}
                       alt={event.title}
+                      width={400}
+                      height={192}
                       className="w-full h-full object-contain object-center"
                       loading={event.id === 1 ? "eager" : "lazy"}
-                      style={{ 
-                        maxWidth: '100%', 
-                        maxHeight: '100%',
-                        objectFit: 'contain',
-                        objectPosition: 'center'
-                      }}
                     />
                     <div className="absolute top-4 right-4">
                       <span className="bg-kerala-red text-white px-3 py-1 rounded-full text-sm font-semibold">
