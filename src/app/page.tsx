@@ -162,7 +162,7 @@ export default function Home() {
               <div className="text-center">
                 <div className="w-24 h-24 bg-gradient-to-r from-kerala-red to-kerala-golden rounded-full flex items-center justify-center mx-auto mb-4 kerala-float overflow-hidden">
                   <img
-                    src="/OnamSadhya.jpg"
+                    src="./OnamSadhya.jpg"
                     alt="Sadhya Feast"
                     className="w-full h-full object-cover"
                   />
@@ -177,7 +177,7 @@ export default function Home() {
               <div className="text-center">
                 <div className="w-24 h-24 bg-gradient-to-r from-kerala-purple to-kerala-pink rounded-full flex items-center justify-center mx-auto mb-4 kerala-float overflow-hidden" style={{animationDelay: '1s'}}>
                   <img
-                    src="/moh.jpg"
+                    src="./moh.jpg"
                     alt="Music & Dance"
                     className="w-full h-full object-cover"
                   />
@@ -192,7 +192,7 @@ export default function Home() {
               <div className="text-center">
                 <div className="w-24 h-24 bg-gradient-to-r from-kerala-green to-kerala-teal rounded-full flex items-center justify-center mx-auto mb-4 kerala-float" style={{animationDelay: '2s'}}>
                   <img
-                    src="/tug.jpg"
+                    src="./tug.jpg"
                     alt="Traditional Games"
                     className="w-full h-full object-cover"
                   />
@@ -207,7 +207,7 @@ export default function Home() {
               <div className="text-center">
                 <div className="w-24 h-24 bg-gradient-to-r from-kerala-orange to-kerala-red rounded-full flex items-center justify-center mx-auto mb-4 kerala-float overflow-hidden" style={{animationDelay: '3s'}}>
                   <img
-                    src="/mav.jpg"
+                    src="./mav.jpg"
                     alt="Festivals"
                     className="w-full h-full object-cover"
                   />
