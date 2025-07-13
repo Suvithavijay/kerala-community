@@ -11,27 +11,27 @@ export default function Home() {
   const featuredEvents = [
     {
       id: 1,
-      title: "Onam Celebration 2024",
-      date: "September 15, 2024",
-      description: "Join us for the grand Onam celebration with traditional sadhya, cultural programs, and games for all ages.",
+      title: "Onam 2025",
+      date: "September 5, 2025",
+      description: "Join us for a grand Onam celebration with traditional feast, cultural performances, and games.",
       category: "festival",
-      image: `${basePath}/kerala-sadhya.jpg`
+      image: `${basePath}/Sadhya_DSW.jpg`
     },
     {
       id: 2,
-      title: "Christmas Potluck",
-      date: "December 25, 2024",
-      description: "Celebrate Christmas with our community potluck featuring traditional Kerala dishes and festive activities.",
+      title: "Christmas and New Year 2026",
+      date: "December 25, 2025 - January 1, 2026",
+      description: "Celebrate the festive season with our community. Special events, carols, and New Year celebrations.",
       category: "celebration",
-      image: `${basePath}/kerala-food.jpg`
+      image: `${basePath}/NewYear.jpg`
     },
     {
       id: 3,
-      title: "Summer Picnic",
-      date: "July 20, 2024",
-      description: "Family picnic with outdoor games, traditional Kerala snacks, and community bonding activities.",
-      category: "picnic",
-      image: `${basePath}/picnic.jpg`
+      title: "Vishu 2026",
+      date: "April 14, 2026",
+      description: "Welcome the Malayalam New Year with traditional Vishu celebrations, Kani viewing, and festive activities.",
+      category: "festival",
+      image: `${basePath}/Vishu_Kani_foods.jpg`
     }
   ];
 
@@ -205,37 +205,61 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredEvents.map((event) => (
               <div key={event.id} className="bg-dark-gray rounded-lg shadow-lg overflow-hidden kerala-card-hover kerala-shadow-vibrant">
-                <div className="h-40 relative overflow-hidden rounded-lg">
+                <div className="h-48 relative overflow-hidden rounded-lg">
                   <img
                     src={event.image}
                     alt={event.title}
                     className="w-full h-full object-contain object-center"
                     loading={event.id === 1 ? "eager" : "lazy"}
                   />
-                  <div className="absolute bottom-2 left-2 text-white z-10">
-                    <div className="text-2xl mb-1">
-                      {event.category === 'festival' && '🎉'}
-                      {event.category === 'celebration' && '🎄'}
-                      {event.category === 'picnic' && '🧺'}
-                    </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-kerala-red text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      {event.category === 'festival' && '🎉 Festival'}
+                      {event.category === 'celebration' && '🎄 Celebration'}
+                      {event.category === 'picnic' && '🧺 Picnic'}
+                    </span>
                   </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-kerala-golden mb-2">
                     {event.title}
                   </h3>
-                  <p className="text-kerala-red font-semibold mb-3">
-                    {event.date}
-                  </p>
+                  <div className="flex items-center text-kerala-red font-semibold mb-2">
+                    <span className="mr-4">📅 {event.date}</span>
+                  </div>
                   <p className="text-gray-300 mb-4">
                     {event.description}
                   </p>
-                  <Link 
-                    href={`/events#${event.id}`}
-                    className="inline-block bg-gradient-to-r from-kerala-golden to-kerala-orange hover:from-kerala-dark-golden hover:to-kerala-red text-white px-4 py-2 rounded font-semibold transition-all duration-200 transform hover:scale-105"
-                  >
-                    Learn More
-                  </Link>
+                  
+                  <div className="mb-4">
+                    <h4 className="text-kerala-golden font-semibold mb-2">Event Highlights:</h4>
+                    <ul className="text-gray-300 text-sm space-y-1">
+                      <li className="flex items-start">
+                        <span className="text-kerala-golden mr-2">•</span>
+                        Traditional Kerala feast and cultural programs
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-kerala-golden mr-2">•</span>
+                        Community bonding and networking
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-kerala-golden mr-2">•</span>
+                        Games and activities for all ages
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="flex justify-between items-center">
+                    <Link 
+                      href={`/events#${event.id}`}
+                      className="inline-block bg-gradient-to-r from-kerala-golden to-kerala-orange hover:from-kerala-dark-golden hover:to-kerala-red text-white px-4 py-2 rounded font-semibold transition-all duration-200 transform hover:scale-105"
+                    >
+                      Learn More
+                    </Link>
+                    <span className="text-kerala-golden text-sm font-semibold">
+                      Event #{event.id}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
