@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
   basePath: '/kerala-community',
   assetPrefix: '/kerala-community',
   images: { unoptimized: true },
-  env: {
-    NEXT_PUBLIC_BASE_PATH: '/kerala-community',
+  publicRuntimeConfig: {
+    basePath: '/kerala-community',
   },
 };
 
