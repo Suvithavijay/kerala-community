@@ -6,6 +6,8 @@ export default function Home() {
   // Temporarily disable authentication for development
   // const { isAuthenticated, requestAccess } = useAuth();
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   const featuredEvents = [
     {
       id: 1,
@@ -13,7 +15,7 @@ export default function Home() {
       date: "September 15, 2024",
       description: "Join us for the grand Onam celebration with traditional sadhya, cultural programs, and games for all ages.",
       category: "festival",
-      image: "/kerala-sadhya.jpg"
+      image: `${basePath}/kerala-sadhya.jpg`
     },
     {
       id: 2,
@@ -21,7 +23,7 @@ export default function Home() {
       date: "December 25, 2024",
       description: "Celebrate Christmas with our community potluck featuring traditional Kerala dishes and festive activities.",
       category: "celebration",
-      image: "/kerala-food.jpg"
+      image: `${basePath}/kerala-food.jpg`
     },
     {
       id: 3,
@@ -29,7 +31,7 @@ export default function Home() {
       date: "July 20, 2024",
       description: "Family picnic with outdoor games, traditional Kerala snacks, and community bonding activities.",
       category: "picnic",
-      image: "/picnic.jpg"
+      image: `${basePath}/picnic.jpg`
     }
   ];
 
@@ -127,7 +129,7 @@ export default function Home() {
             <div className="text-center">
               <div className="w-24 h-24 bg-gradient-to-r from-kerala-red to-kerala-golden rounded-full flex items-center justify-center mx-auto mb-4 kerala-float overflow-hidden">
                 <img
-                  src="/OnamSadhya.jpg"
+                  src={`${basePath}/OnamSadhya.jpg`}
                   alt="Sadhya Feast"
                   className="w-full h-full object-cover"
                 />
@@ -142,7 +144,7 @@ export default function Home() {
             <div className="text-center">
               <div className="w-24 h-24 bg-gradient-to-r from-kerala-purple to-kerala-pink rounded-full flex items-center justify-center mx-auto mb-4 kerala-float overflow-hidden" style={{animationDelay: '1s'}}>
                 <img
-                  src="/moh.jpg"
+                  src={`${basePath}/moh.jpg`}
                   alt="Music & Dance"
                   className="w-full h-full object-cover"
                 />
@@ -157,7 +159,7 @@ export default function Home() {
             <div className="text-center">
               <div className="w-24 h-24 bg-gradient-to-r from-kerala-green to-kerala-teal rounded-full flex items-center justify-center mx-auto mb-4 kerala-float" style={{animationDelay: '2s'}}>
                 <img
-                  src="/tug.jpg"
+                  src={`${basePath}/tug.jpg`}
                   alt="Traditional Games"
                   className="w-full h-full object-cover"
                 />
@@ -172,7 +174,7 @@ export default function Home() {
             <div className="text-center">
               <div className="w-24 h-24 bg-gradient-to-r from-kerala-orange to-kerala-red rounded-full flex items-center justify-center mx-auto mb-4 kerala-float overflow-hidden" style={{animationDelay: '3s'}}>
                 <img
-                  src="/mav.jpg"
+                  src={`${basePath}/mav.jpg`}
                   alt="Festivals"
                   className="w-full h-full object-cover"
                 />

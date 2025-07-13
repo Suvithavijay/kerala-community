@@ -6,6 +6,8 @@ export default function Events() {
   // Temporarily disable authentication for development
   // const { isAuthenticated, requestAccess } = useAuth();
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   const events = [
     {
       id: 1,
@@ -14,7 +16,7 @@ export default function Events() {
       time: "6:00 PM - 10:00 PM",
       location: "COSMA Community Center",
       description: "Join us for a grand Onam celebration with traditional feast, cultural performances, and games.",
-      image: "/Sadhya_DSW.jpg",
+      image: `${basePath}/Sadhya_DSW.jpg`,
       category: "festival",
       color: "from-kerala-orange to-kerala-red",
       details: [
@@ -33,7 +35,7 @@ export default function Events() {
       time: "Various times",
       location: "COSMA Community Center & Local Venues",
       description: "Celebrate the festive season with our community. Special events, carols, and New Year celebrations.",
-      image: "/NewYear.jpg",
+      image: `${basePath}/NewYear.jpg`,
       category: "celebration",
       color: "from-kerala-green to-kerala-teal",
       details: [
@@ -51,7 +53,7 @@ export default function Events() {
       time: "6:00 AM - 2:00 PM",
       location: "COSMA Community Center",
       description: "Welcome the Malayalam New Year with traditional Vishu celebrations, Kani viewing, and festive activities.",
-      image: "/Vishu_Kani_foods.jpg",
+      image: `${basePath}/Vishu_Kani_foods.jpg`,
       category: "festival",
       color: "from-kerala-golden to-kerala-orange",
       details: [
@@ -69,7 +71,7 @@ export default function Events() {
       time: "10:00 AM - 6:00 PM",
       location: "Garden of the Gods Park",
       description: "Enjoy a fun-filled summer picnic with family activities, games, and delicious Kerala cuisine.",
-      image: "/picnic.jpg",
+      image: `${basePath}/picnic.jpg`,
       category: "picnic",
       color: "from-kerala-green to-kerala-teal",
       details: [
@@ -87,7 +89,7 @@ export default function Events() {
       time: "6:00 PM - 10:00 PM",
       location: "COSMA Community Center",
       description: "Another year of Onam celebrations with traditional feast, cultural performances, and community bonding.",
-      image: "/Kathakali_BNC.jpg",
+      image: `${basePath}/Kathakali_BNC.jpg`,
       category: "festival",
       color: "from-kerala-orange to-kerala-red",
       details: [
