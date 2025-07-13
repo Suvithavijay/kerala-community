@@ -1,15 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Static export settings for GitHub Pages deployment
-  output: 'export',
-  trailingSlash: true,
+  // Only apply static export settings for production builds
+  ...(process.env.NODE_ENV === 'production' && {
+    output: 'export',
+    trailingSlash: true,
+    basePath: '/kerala-community',
+    assetPrefix: '/kerala-community',
+  }),
   images: {
     unoptimized: true,
   },
-  // Base path for GitHub Pages
-  basePath: process.env.NODE_ENV === 'production' ? '/kerala-community' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/kerala-community' : '',
 };
 
 export default nextConfig;
