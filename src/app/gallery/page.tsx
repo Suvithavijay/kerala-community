@@ -14,7 +14,7 @@ interface Photo {
 }
 
 export default function GalleryPage() {
-  const basePath = process.env.NODE_ENV === 'production' ? '/kerala-community' : '';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
 

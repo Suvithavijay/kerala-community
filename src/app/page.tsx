@@ -6,7 +6,7 @@ export default function Home() {
   // Temporarily disable authentication for development
   // const { isAuthenticated, requestAccess } = useAuth();
 
-  const basePath = process.env.NODE_ENV === 'production' ? '/kerala-community' : '';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   const featuredEvents = [
     {
