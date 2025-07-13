@@ -6,8 +6,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: "/kerala-community",
-  basePath: "/kerala-community",
 };
 
 export default nextConfig;
