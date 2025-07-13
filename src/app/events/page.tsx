@@ -6,7 +6,7 @@ export default function Events() {
   // Temporarily disable authentication for development
   // const { isAuthenticated, requestAccess } = useAuth();
 
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || '').replace(/\/$/, '');
 
   const events = [
     {
