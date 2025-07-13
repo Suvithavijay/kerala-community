@@ -14,6 +14,7 @@ interface Photo {
 }
 
 export default function GalleryPage() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
 
@@ -30,7 +31,7 @@ export default function GalleryPage() {
       id: 1,
       title: "Onam Celebration 2023",
       description: "Beautiful Onam celebration with traditional pookalam and feast",
-      imageUrl: "/onam-2023.jpg",
+      imageUrl: `${basePath}/onam-2023.jpg`,
       uploadedBy: "Priya Menon",
       date: "September 2023",
       category: "events",
@@ -40,7 +41,7 @@ export default function GalleryPage() {
       id: 2,
       title: "Traditional Kerala Sadya",
       description: "Authentic Kerala feast with 26 different dishes served on banana leaf",
-      imageUrl: "/kerala-sadya.jpg",
+      imageUrl: `${basePath}/kerala-sadya.jpg`,
       uploadedBy: "Rajesh Kumar",
       date: "October 2023",
       category: "food",
@@ -50,7 +51,7 @@ export default function GalleryPage() {
       id: 3,
       title: "Kathakali Performance",
       description: "Traditional Kathakali dance performance at our cultural event",
-      imageUrl: "/kathakali.jpg",
+      imageUrl: `${basePath}/kathakali.jpg`,
       uploadedBy: "Anita Nair",
       date: "November 2023",
       category: "culture",
@@ -60,7 +61,7 @@ export default function GalleryPage() {
       id: 4,
       title: "Community Cooking Class",
       description: "Learning to make traditional Kerala dishes together",
-      imageUrl: "/cooking-class.jpg",
+      imageUrl: `${basePath}/cooking-class.jpg`,
       uploadedBy: "Suresh Pillai",
       date: "December 2023",
       category: "community",
@@ -70,7 +71,7 @@ export default function GalleryPage() {
       id: 5,
       title: "Vishu Celebration",
       description: "Vishukkani arrangement and New Year celebrations",
-      imageUrl: "/vishu.jpg",
+      imageUrl: `${basePath}/vishu.jpg`,
       uploadedBy: "Lakshmi Devi",
       date: "April 2024",
       category: "events",
@@ -80,7 +81,7 @@ export default function GalleryPage() {
       id: 6,
       title: "Kerala Fish Curry",
       description: "Authentic Kerala fish curry with traditional spices",
-      imageUrl: "/fish-curry.jpg",
+      imageUrl: `${basePath}/fish-curry.jpg`,
       uploadedBy: "Mohan Das",
       date: "January 2024",
       category: "food",
@@ -90,7 +91,7 @@ export default function GalleryPage() {
       id: 7,
       title: "Malayalam Poetry Night",
       description: "Community members sharing beautiful Malayalam poetry",
-      imageUrl: "/poetry-night.jpg",
+      imageUrl: `${basePath}/poetry-night.jpg`,
       uploadedBy: "Kavya Sreekumar",
       date: "February 2024",
       category: "culture",
@@ -100,7 +101,7 @@ export default function GalleryPage() {
       id: 8,
       title: "Community Picnic",
       description: "Fun day out with community members and families",
-      imageUrl: "/community-picnic.jpg",
+      imageUrl: `${basePath}/community-picnic.jpg`,
       uploadedBy: "Sunil Nambiar",
       date: "March 2024",
       category: "community",
