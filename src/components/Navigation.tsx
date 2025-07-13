@@ -6,11 +6,6 @@ import { useState, useEffect } from 'react';
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  
-  // Temporarily disable authentication for development
-  const isAuthenticated = false;
-  const userEmail = null;
-  const logout = () => {};
 
   useEffect(() => {
     setMounted(true);
@@ -65,7 +60,6 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            {/* Temporarily show navigation for all users */}
             <div className="flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <Link
@@ -77,19 +71,6 @@ export default function Navigation() {
                 </Link>
               ))}
             </div>
-            {isAuthenticated && (
-              <div className="flex items-center space-x-4 ml-6">
-                <span className="text-kerala-golden text-sm">
-                  Welcome, {userEmail}
-                </span>
-                <button
-                  onClick={logout}
-                  className="text-kerala-red hover:text-kerala-dark-red px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-                >
-                  Logout
-                </button>
-              </div>
-            )}
           </div>
 
           {/* Mobile menu button */}
@@ -109,7 +90,6 @@ export default function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {/* Temporarily show navigation for all users */}
               {navItems.map((item) => (
                 <Link
                   key={item.name}
@@ -120,22 +100,6 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
-              {isAuthenticated && (
-                <div className="border-t border-kerala-golden pt-4 mt-4">
-                  <div className="text-kerala-golden text-sm px-3 py-2">
-                    Welcome, {userEmail}
-                  </div>
-                  <button
-                    onClick={() => {
-                      logout();
-                      setIsMenuOpen(false);
-                    }}
-                    className="text-kerala-red hover:text-kerala-dark-red block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-                  >
-                    Logout
-                  </button>
-                </div>
-              )}
             </div>
           </div>
         )}
