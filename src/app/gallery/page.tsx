@@ -14,7 +14,7 @@ interface Photo {
 }
 
 export default function GalleryPage() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const basePath = '';
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
 
